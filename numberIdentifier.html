@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Number Identifier</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+<style>
+    * {
+        background-image: url(./Assets/Connettivita-720x380-1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
+    body {
+        color: white;
+    }
+    h1 {
+        margin-top: 20px;
+    }
+</style>
+<body>
+    <h1 class="text-center text-info">Phone Number Identifier</h1>
+    <div class="container mx-auto p-5 rounded shadow">
+        <input type="text" id="phoneNumber" class="form-control" placeholder="Enter phone number">
+        <button class="btn btn-primary" onclick="identifyNumber()">Identify</button>
+    </div>
+    <div id="result" class="container mx-auto p-3 ">
+        <!-- Result will be displayed here -->
+
+    </div>
+    <script>
+        const identifyNumber = () => {
+            const phoneNumber = document.getElementById("phoneNumber").value;
+            const airtelPattern = /0(701|708|802|808|812|902|907)\d{7}/;
+            const mtnPattern = /0(703|706|803|806|810|813|814|816|903|906)\d{7}/;
+            const gloPattern = /0(705|805|807|811|815|905)\d{7}/;
+            const _9mobilePattern = /0(809|817|818|908|909)\d{7}/;
+
+            if (airtelPattern.test(phoneNumber)) {
+                document.getElementById("result").innerHTML = `<div class="alert alert-success">Valid Airtel number: ${phoneNumber}</div>`;
+            } else if (mtnPattern.test(phoneNumber)) {
+                document.getElementById("result").innerHTML = `<div class="alert alert-success">Valid MTN number: ${phoneNumber}</div>`;
+            } else if (gloPattern.test(phoneNumber)) {
+                document.getElementById("result").innerHTML = `<div class="alert alert-success">Valid Glo number: ${phoneNumber}</div>`;
+            } else if (_9mobilePattern.test(phoneNumber)) {
+                document.getElementById("result").innerHTML = `<div class="alert alert-success">Valid 9Mobile number: ${phoneNumber}</div>`;
+            } else {
+                document.getElementById("result").innerHTML = `<div class="alert alert-danger">Invalid phone number</div>`;
+            }
+        }
+    </script>
+</body>
+</html>

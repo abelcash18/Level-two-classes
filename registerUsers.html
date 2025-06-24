@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.3.7-dist/css/bootstrap.min.css">
+   </head>
+    <body>
+    <style>
+        #btn2{
+            display: none;
+        }
+    </style>
+    <div class="mx-auto col-8 rounded-3 shadow my-3 p-3">
+        <div class="text-center">
+            <h3 class="fs-5">Create a new account</h3>
+           
+        </div>
+
+        <hr>
+
+        <div class="row my-3">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="First Name" aria-label="First Name" id="firstname">         
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Last name" aria-label="Last Name" id="lastname">
+            </div>
+            <div class="my-3">
+                <label for="" class="form-label">Date of birth</label>
+            <input type="date" class="form-control" id="dob">
+            </div>
+            <div class="my-3">
+                <input type="email" class="form-control" placeholder="example@gmail.com" id="email">
+            </div>
+            <div class="row my-3">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Password" id="password">
+                </div>
+                <div class="col">
+                    <select class="form-select" name="gender" id="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+            </div>
+            <button onclick="registerUser() ,displayUser()" id="btn1" class="btn btn-success my-3">Register</button>
+            <button onclick="updateUser()" id="btn2" class="btn btn-warning my-3">Update</button>
+        </div>
+    </div>
+
+    <div class="mx-auto col-10 my-3">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>S/N</th>
+                    <th>Full Name</th>
+                    <th>Date of Birth</th>
+                    <th>Gender</th>
+                    <th>Email</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="display">
+                <tr>
+                    <!-- <td>1</td>
+                    <td>Joseph Abel</td>
+                    <td>josephabel540@d@gmail.com</td> -->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="modal" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="userModalLabel">User Details</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modalBody">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="registerUsers.js"></script>
+</body>
+</html>

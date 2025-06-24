@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Regular Expression</h1>
+
+    <input type="text" id="userinput">
+    <button onclick="testEmail()">Test Email</button>
+
+    <script>
+        const testEmail = () => {
+            const emailPattern = /^[a-zA-Z0-9_%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]+{2,}$/;
+            const userInput = document.getElementById("userinput").value;
+
+            if (emailPattern.test(userInput)) {
+                alert("Valid email address");
+            } else {
+                alert("Invalid email address");
+            }
+        }
+    </script>
+</body>
+</html>

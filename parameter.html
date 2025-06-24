@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Assets/bootstrap-5.3.3/dist/css/bootstrap.css">
+</head>
+<body>
+    <style>
+        #userInput1{
+            text-align: right;
+        }
+    </style>
+
+    <div class="col-7 p-3 mx-auto my-3 rounded-3 shadow-lg">
+        <h1 id="display">Parameterized Function</h1>
+        <input class="form-control mb-3" type="text" id="userInput1" readonly placeholder="0">
+        <!-- <input class="form-control mb-3" type="text" id="userInput2" placeholder="second input"> -->
+        <!-- <button onclick="addValues()" class="btn btn-danger">Add Number</button> -->
+        <!-- <button onclick="subValues()" class="btn btn-success">Subtract Number</button> -->
+
+        
+        <div id="answer">
+
+        </div>
+        <br><br>
+
+        <input type="button" value="7" onclick="displayNumber('7')">
+        <input type="button" value="8" onclick="displayNumber('8')">
+        <input type="button" value="9" onclick="displayNumber('9')">
+        <input type="button" value="+" onclick="displayNumber('+')">
+        <br>
+        <input type="button" value="4" onclick="displayNumber('4')">
+        <input type="button" value="5" onclick="displayNumber('5')">
+        <input type="button" value="6" onclick="displayNumber('6')">
+        <input type="button" value="-" onclick="displayNumber('-')">
+        <br>
+        <input type="button" value="1" onclick="displayNumber('1')">
+        <input type="button" value="2" onclick="displayNumber('2')">
+        <input type="button" value="3" onclick="displayNumber('3')">
+        <input type="button" value="=" onclick="evaluateValue('=')">
+        <input type="button" value="=" onclick="evaluateValue('=')">
+,    </div>
+
+    <!-- <h1 id="display">Parameterized Function</h1>
+    <button onclick="runParameter('Bukunmi')">Parameter B</button>
+    <button onclick="runParameter('Ibrahim')">Parameter I</button>
+    <button onclick="runParameter('Shadrach')">Parameter S</button>
+    <button onclick="runParameter('Khaleed')">Parameter K</button>
+    <button onclick="runParameter('Philip')">Parameter P</button> -->
+
+    <script src="parameter.js"></script>
+</body>
+</html>

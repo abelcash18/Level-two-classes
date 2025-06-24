@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Assets/bootstrap-5.3.3/dist/css/bootstrap.css">
+</head>
+<body>
+    <label for="">Starting point: </label>
+    <input id="start" type="number">
+    <label for="">Ending point: </label>
+    <input id="end" type="number">
+    <label for="">Rows: </label>
+    <input id="row" type="number">
+    <br>
+    <br>
+    <button class="btn btn-danger" onclick="showTable()">Display Table</button>
+    <br>
+    <br>
+
+    <table class="table table-striped">
+        <tr id="display-table">
+            <td>
+                <table>
+                    <tr>
+                        <th></th>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
